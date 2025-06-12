@@ -74,7 +74,7 @@ setupQuestion(
   "wrapper3",
   "gif3",
   "question3",
-  "Jajajaja un inge en proceso de conquista ❤️",
+  "un ingeniero en proceso de conquista jaja ❤️",
   "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmdmOGpkb25ieGJlMmd4b2oyYjM2a2Z6cWFscmF5MjI5NHRkOWRqOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IatVSUS0eex7f5p7uB/giphy.gif",
   "" // No hay siguiente
 );
