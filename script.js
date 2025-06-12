@@ -1,80 +1,102 @@
-// Función para hacer que el botón "No" se mueva
-function makeNoButtonMove(btn) {
-  btn.addEventListener("mouseover", () => {
-    const maxX = window.innerWidth - btn.offsetWidth;
-    const maxY = window.innerHeight - btn.offsetHeight;
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
-    btn.style.position = "absolute";
-    btn.style.left = `${randomX}px`;
-    btn.style.top = `${randomY}px`;
-  });
-}
 
-// Maneja cada sección de forma genérica
-function setupQuestion(wrapperId, gifId, questionId, yesText, gifYesUrl, nextWrapperId) {
-  const wrapper = document.getElementById(wrapperId);
-  const yesBtn = wrapper.querySelector(".yes-btn");
-  const noBtn = wrapper.querySelector(".no-btn");
-  const gif = document.getElementById(gifId);
-  const question = document.getElementById(questionId);
-
-  makeNoButtonMove(noBtn);
-
-  const continueBtn = document.createElement("button");
-  continueBtn.textContent = "Continuar";
-  continueBtn.style.marginTop = "20px";
-  continueBtn.style.position = "static";
-  continueBtn.style.background = "#e94d58";
-  continueBtn.style.color = "white";
-  continueBtn.style.padding = "10px 20px";
-  continueBtn.style.borderRadius = "20px";
-  continueBtn.style.border = "none";
-  continueBtn.style.cursor = "pointer";
-  continueBtn.style.boxShadow = "0 2px 4px gray";
-
-  yesBtn.addEventListener("click", () => {
-    question.textContent = yesText;
-    gif.src = gifYesUrl;
-
-    if (!wrapper.contains(continueBtn)) {
-      wrapper.appendChild(continueBtn);
-    }
+  $('.no').on("click", function(){ 
+  $('#f1').css('display', 'none');
+  $('#f2').css('display', 'flex');  
   });
 
-  continueBtn.addEventListener("click", () => {
-    wrapper.style.display = "none";
-    const nextWrapper = document.getElementById(nextWrapperId);
-    if (nextWrapper) nextWrapper.style.display = "block";
+  $('.weno').on("click", function(){ 
+  $('#f2').css('display', 'none');
+  $('#f1').css('display', 'flex');  
   });
-}
 
-// Pregunta 1
-setupQuestion(
-  "wrapper1",
-  "gif1",
-  "question1",
-  "I knew it 😍",
-  "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif",
-  "wrapper2"
-);
+  $('.si').on("click", function(){ 
+  $('#f1').css('display', 'none');
+  $('#f3').css('display', 'flex');  
+  });
 
-// Pregunta 2
-setupQuestion(
-  "wrapper2",
-  "gif2",
-  "question2",
-  "Aww, kisses for you 💋",
-  "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWR0M2twZ3hpdWtyZnJwazE3OTF3cHZydW12bHRwaGduajNpZ2VzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT39CXg70nNS0MFNLy/giphy.gif",
-  "wrapper3"
-);
+  $('.dale').on("click", function(){ 
+  $('#f3').css('display', 'none');
+  $('#f4').css('display', 'flex');  
+  });
 
-// Pregunta 3
-setupQuestion(
-  "wrapper3",
-  "gif3",
-  "question3",
-  "un ingeniero en proceso de conquista jaja ❤️",
-  "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmdmOGpkb25ieGJlMmd4b2oyYjM2a2Z6cWFscmF5MjI5NHRkOWRqOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IatVSUS0eex7f5p7uB/giphy.gif",
-  "" // No hay siguiente
-);
+  $('.rega').on("click", function(){ 
+  $('#f4').css('display', 'none');
+  $('#f5').css('display', 'flex');  
+  });
+
+  $('.ojo').on("click", function(){ 
+  $('#f5').css('display', 'none');
+  $('#f6').css('display', 'flex');  
+  });
+
+$('.ojo').on("click", function(){ 
+  $('#f5').css('display', 'none');
+  $('#f6').css('display', 'flex');  
+  });
+
+$('.afi').on("click", function(){ 
+  $('#f6').css('display', 'none');
+  $('#f7').css('display', 'flex');
+    $('#f8').css('display', 'flex');  
+  });
+
+$('.salu').on("click", function(){ 
+  $('#f8').css('display', 'none');
+  $('#f9').css('display', 'flex');  
+  });
+
+$('.copy').on("click", function(){ 
+  $('#f9').css('display', 'none');
+  $('#f10').css('display', 'flex');          $('#f11').css('display', 'flex');
+  });
+
+$('span.go').on("click", function(){ 
+  $('#f13').css('display', 'none');
+  $('#f14').css('display', 'block');   
+  });
+
+$('.ca1').on("click", function(){ 
+  $('#f12').css('display', 'flex'); 
+  $('#f13').css('display', 'block'); 
+  });
+
+$('.ca3').on("click", function(){ 
+  $('#f15').css('display', 'block'); 
+  $('#f16').css('display', 'flex'); 
+  });
+
+$('.ca2').on("click", function(){ 
+  $('#f18').css('display', 'block'); 
+  $('#f19').css('display', 'flex'); 
+  });
+
+$('.carta').on("click", function(){ 
+  $('#f12').css('display', 'none'); 
+  });
+ 
+$('.anillo').on("click", function(){ 
+  $('#f16').css('display', 'none');
+   $('#f17').css('display', 'flex');
+  
+  });
+
+$('.marry').on("click", function(){ 
+  $('#f15').css('display', 'none');
+  $('#f17').css('display', 'none');
+  });
+ 
+$('.meme').on("click", function(){ 
+  $('#f19').css('display', 'none');
+  $('#f20').css('display', 'flex');
+  });
+
+$('.meme2').on("click", function(){ 
+  $('#f20').css('display', 'none');
+  $('#f21').css('display', 'flex');
+  });
+
+$('.yes').on("click", function(){ 
+  $('#f21').css('display', 'none');
+  $('#f22').css('display', 'flex');
+  });
+ 
